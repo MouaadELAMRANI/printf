@@ -3,7 +3,7 @@
 
 #include <unistd.h>
 #include <stdlib.h>
-#include <starg.h>
+#include <stdarg.h>
 
 int _printf(const char *format, ...);
 int _strlen(const char *str);
