@@ -1,6 +1,10 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 
+#include <unistd.h>
+#include <stdlib.h>
+#include <starg.h>
+
 int _printf(const char *format, ...);
 int _strlen(const char *str);
 int print(char *str);
