@@ -15,11 +15,9 @@ int _printf(const char *format, ...)
 		return (-1);
 	}
 
-	size = _strlen(formation);
-
 	va_start(args, format);
 
-	handler(format, args);
+	size = handler(format, args);
 
 	va_end(args);
 
