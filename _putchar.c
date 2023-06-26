@@ -3,9 +3,8 @@
 /**
  * _putchar - prints char to stdout
  * @c: char
- * Return: 1 (success) or -1 (fail)
  */
-int _putchar(char c)
+void _putchar(char c)
 {
 	static char buffering[1024];
 	static int i;
@@ -18,6 +17,4 @@ int _putchar(char c)
 
 	if (c != -1)
 		buffering[i++] = c;
-
-	return (1);
 }
