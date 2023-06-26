@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	size = handler(format, args);
+	size = _formathandler(format, args);
 
 	va_end(args);
 
