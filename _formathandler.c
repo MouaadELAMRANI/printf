@@ -10,9 +10,10 @@ int _formathandler(const char *format, va_list vals)
 {
 	int size, i, valsize;
 
-	size = _strlen(format);
-	for (i = 0; format[i] < size; i++)
+	size = 0;
+	for (i = 0; i <  _strlen(format); i++)
 	{
+		size += 1;
 		if (format[i] == '%')
 		{
 			switch(format[i+1])
@@ -22,10 +23,15 @@ int _formathandler(const char *format, va_list vals)
 					size += valsize;
 					break;
 				case 'c':
-					valsize 
 					break;
 			}
 		}
+		else
+		{
+			//_putchar(format[i]); 
+		}
 	}
+	_putchar(-1);
+
 	return size;
 }

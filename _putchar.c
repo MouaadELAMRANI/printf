@@ -16,5 +16,7 @@ void _putchar(char c)
 	}
 
 	if (c != -1)
+	{
 		buffering[i++] = c;
+	}		
 }

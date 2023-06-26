@@ -8,13 +8,12 @@
 
 int print(char *str)
 {
-	int x;
-
-	for (x = 0; str[x] != '\0'; x++)
+	int i;
+	for (i = 0; str[i] != '\0'; ++i)
 	{
-		_putchar(str[x]);
+		_putchar(str[i]);
 	}
-	return (x);
+	return (i);
 }
 
 /**
@@ -25,10 +24,10 @@ int print(char *str)
 
 int _strlen(const char *str)
 {
-	int x;
+	int i;
 
-	for (x = 0; str[x] != 0; x++)
-		;
-	return (x);
+	for (i = 0; str[i] != 0; i++);
+
+	return (i);
 }
 
