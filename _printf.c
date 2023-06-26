@@ -16,10 +16,6 @@ int _printf(const char *format, ...)
 	}
 
 	size = _strlen(formation);
-	if (size <= 0)
-	{
-		return (0);
-	}
 
 	va_start(args, format);
 
