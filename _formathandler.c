@@ -8,22 +8,24 @@
  */
 int _formathandler(const char *format, va_list vals)
 {
-	int size, i;
+	int size, i, valsize;
 
-	size = 0;
-	for (i = 0; str[i] != 0; i++)
+	size = _strlen(format);
+	for (i = 0; format[i] < size; i++)
 	{
-		if (str[i] == '%')
+		if (format[i] == '%')
 		{
-			switch(str[i+1])
+			switch(format[i+1])
 			{
 				case 's':
-					//to do
+					valsize = print_s(vals);
+					size += valsize;
 					break;
 				case 'c':
-					//to do
+					valsize 
 					break;
 			}
 		}
 	}
+	return size;
 }
