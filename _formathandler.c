@@ -11,7 +11,7 @@ int _formathandler(const char *format, va_list vals)
 	int size, i, valsize;
 
 	size = 0;
-	for (i = 0; i <  _strlen(format); i++)
+	for (i = 0; i < _strlen(format); i++)
 	{
 		size += 1;
 		if (format[i] == '%')
@@ -21,6 +21,7 @@ int _formathandler(const char *format, va_list vals)
 				case 's':
 					valsize = print_s(vals);
 					size += valsize;
+					i++;
 					break;
 				case 'c':
 					break;
@@ -28,7 +29,7 @@ int _formathandler(const char *format, va_list vals)
 		}
 		else
 		{
-			//_putchar(format[i]); 
+			_putchar(format[i]);  
 		}
 	}
 	_putchar(-1);
