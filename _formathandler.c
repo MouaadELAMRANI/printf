@@ -24,6 +24,9 @@ int _formathandler(const char *format, va_list vals)
 					i++;
 					break;
 				case 'c':
+					valsize = print_c(vals);
+					size += valsize;
+					i++;
 					break;
 			}
 		}
