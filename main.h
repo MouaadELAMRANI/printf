@@ -4,15 +4,15 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
-#include <stdio.h>
 
 int _printf(const char *format, ...);
 int _strlen(const char *str);
 int print(char *str);
 int print_s(va_list vals);
+int print_int(va_list vals);
+int print_c(va_list vals);
 void _putchar(char c);
 int _formathandler(const char *format, va_list vals);
-char *conv_into_str(unsigned long int num, int base, int lowcase);
+char *convert(long int num, int base);
 
-int print_c(va_list vals);
 #endif

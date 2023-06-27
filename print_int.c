@@ -10,7 +10,7 @@ int print_int(va_list vals)
 	char *ptr;
 	int length;
 
-	ptr = conv_into_str(va_arg(vals, int), 10);
+	ptr = convert(va_arg(vals, int), 10);
 
 	length = print((ptr != NULL) ? ptr : "NULL");
 
