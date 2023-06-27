@@ -28,6 +28,11 @@ int _formathandler(const char *format, va_list vals)
 					size += valsize;
 					i++;
 					break;
+				case '%':
+					_putchar('%');
+					size += 1;
+					i++;
+					break;
 			}
 		}
 		else
