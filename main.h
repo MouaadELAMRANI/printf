@@ -11,4 +11,6 @@ int print(char *str);
 int print_s(va_list vals);
 void _putchar(char c);
 int _formathandler(const char *format, va_list vals);
+
+int print_c(va_list vals);
 #endif
