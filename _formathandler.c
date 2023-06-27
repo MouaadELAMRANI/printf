@@ -33,6 +33,8 @@ int _formathandler(const char *format, va_list vals)
 					size += 1;
 					i++;
 					break;
+				default:
+					_putchar(format[i]);
 			}
 		}
 		else

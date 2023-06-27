@@ -16,17 +16,17 @@ int main(void)
 	_printf("Percent:[%%]\n");
 	printf("Percent:[%%]\n");
 
-	_printf("Test:[%s]\n", "string 1", "string 2");
-/*	_printf("Test:[%s]\n", -1); */
-	_printf("Test:[%s]\n", "a");
-	_printf("Test:[%s]\n");
-/*	_printf("Test:[%s]\n", 1); */
-	_printf("last char is percent Test:%"); /*unhandled*/
-	printf("1\n");
-	_printf("");
-	printf("2\n");
-	_printf("", "Arg");
-	printf("3\n");
+	_printf("_Test:[%s]\n", "string 1", "string 2");
+	printf("Test:[%s]\n", "string 1", "string 2");
+/*	_printf("_Test:[%s]\n", -1); */
+/*	printf("Test:[%s]\n", -1); */ /* segmentation fault on both _printf and printf */
+	printf("no args \n");
+	_printf("_Test:[%s]\n");
+	printf("nnnn \n");
+	printf("Test:[%s]\n");
+	printf("last \n");
+	_printf("_last char is percent Test:%"); /*unhandled*/
+	printf("last char is percent Test:%");
 
 	return (0);
 }
